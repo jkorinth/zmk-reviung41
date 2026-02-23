@@ -134,6 +134,12 @@
 			bindings = <&to 3>;
 
 		};
+
+		combo_zmk_studio_unlock {
+			require-prior-idle-ms = <500>;
+			key-positions = <0 11 24 35>;
+			bindings = <&studio_unlock>;
+		};
 	};
 
         keymap {
