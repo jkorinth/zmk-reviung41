@@ -157,25 +157,25 @@
                 default_layer {
 // -------------------------------------------------------------------------------------
 // | TAB   | Q     | W     | E     | R     |  T  |   |  Y  | U     | I     | O     | P     | BSPC   |
-// | ESC   | LS(A) | LC(S) | LA(D) | LG(F) |  G  |   |  H  | J     | K     | RC(L) | RS(;) | '(RET) |
-// |       | Z     | X     | C     | V     |  B  |   |  N  | RG(M) | RA(,) | .     | /     | RCTRL  |
+// | ESC   | LS(A) | LC(S) | LA(D) | LG(F) |  G  |   |  H  | J     | K     | L     | ;     | '(RET) |
+// | cw    | Z     | X     | C     | V     |  B  |   |  N  | RG(M) | RA(,) | RC(.) | RS(/) | RCTRL  |
 //                                 | MO(1) | SPC | TOG(2) | RET | MO(1) |
                         bindings = <
-   &kp TAB   &mt N1 Q    &mt N2 W    &mt N3 E   &mt N4 R   &mt N5 T &mt N6 Y &mt N7 U   &mt N8 I        &mt N9 O    &mt N0 P       &kp BSPC
-   &kp ESC   &mt LSHFT A &mt LCTRL S &mt LALT D &mt LGUI F &kp G    &kp H    &kp J      &kp K           &mt RCTRL L &mt RSHFT SEMI &mt SQT RET
-   &td_caps  &kp Z       &kp X       &kp C      &kp V      &kp B    &kp N    &mt RGUI M &mt RALT COMMA  &kp DOT     &kp FSLH       &kp RCTRL
+   &kp TAB   &mt N1 Q    &mt N2 W    &mt N3 E   &mt N4 R   &mt N5 T &mt N6 Y &mt N7 U   &mt N8 I        &mt N9 O      &mt N0 P       &kp BSPC
+   &kp ESC   &mt LSHFT A &mt LCTRL S &mt LALT D &mt LGUI F &kp G    &kp H    &kp J      &kp K           &kp L         &kp SEMI       &mt SQT RET
+   &td_caps  &kp Z       &kp X       &kp C      &kp V      &kp B    &kp N    &mt RGUI M &mt RALT COMMA  &mt RCTRL DOT &mt RSHFT FSLH &kp RCTRL
                                              &mo 1 &kp SPACE &tog 1 &kp RET &mo 1
                         >;
                 };
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------
-// |  ^  |  1  |  2  |  3  |  4  |  5   | | |   6  |   7  |   8  |   9   |  0  | DEL |
+// | LG  |  1  |  2  |  3  |  4  |  5   | | |   6  |   7  |   8  |   9   |  0  | DEL |
 // | LSH | MB3 | MB2 | M_U | MB1 | PGUP | | | HOME | LEFT |  UP  | RIGHT |  ^  | RSH |
 // | LC  | LA  | M_L | M_D | M_R | PGDN | | |  END |   ^  | DOWN |   ^   | RA  | RC  |
 //                   |  ^  |  ^  |      | ^ |   ^  |   ^  |
                         bindings = <
-   &trans    &kp N1   &kp N2         &kp N3         &kp N4          &kp N5     &kp N6   &kp N7   &kp N8   &kp N9    &kp N0   &kp DEL
+   &kp LGUI  &kp N1   &kp N2         &kp N3         &kp N4          &kp N5     &kp N6   &kp N7   &kp N8   &kp N9    &kp N0   &kp DEL
    &kp LSHFT &mkp MB3 &mkp MB2       &mmv MOVE_UP   &mkp MB1        &kp PGUP   &kp HOME &kp LEFT &kp UP   &kp RIGHT &trans   &kp RSHFT
    &kp LCTRL &kp LALT &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp PGDN   &kp END  &trans   &kp DOWN &trans    &kp RALT &kp RCTRL
                           	                            &trans &trans &tog 1 &trans &tog 2
