@@ -12,6 +12,7 @@ manifest:
       import: app/west.yml
       revision: feature/rgb-underglow-update-hook
     - name: zmk-rgb-underglow-mask-leds
+      revision: main
       remote: jkorinth
   self:
     path: config
