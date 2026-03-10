@@ -156,12 +156,12 @@
                 default_layer {
 // -------------------------------------------------------------------------------------
 // | TAB   | Q     | W     | E     | R     |  T  |   |  Y  | U     | I     | O     | P     | BSPC   |
-// | ESC   | LS(A) | LC(S) | LA(D) | LG(F) |  G  |   |  H  | J     | K     | L     | ;     | '(RET) |
+// | ESC   | LS(A) | LC(S) | LA(D) | LG(F) |  G  |   |  H  | J     | K     | L     | ;     | '      |
 // | cw    | Z     | X     | C     | V     |  B  |   |  N  | RG(M) | RA(,) | RC(.) | RS(/) | RCTRL  |
 //                                 | MO(1) | SPC | TOG(2) | RET | MO(1) |
                         bindings = <
    &kp TAB   &mt N1 Q    &mt N2 W    &mt N3 E   &mt N4 R   &mt N5 T &mt N6 Y &mt N7 U   &mt N8 I        &mt N9 O      &mt N0 P       &kp BSPC
-   &kp ESC   &mt LSHFT A &mt LCTRL S &mt LALT D &mt LGUI F &kp G    &kp H    &kp J      &kp K           &kp L         &kp SEMI       &mt SQT RET
+   &kp ESC   &mt LSHFT A &mt LCTRL S &mt LALT D &mt LGUI F &kp G    &kp H    &kp J      &kp K           &kp L         &kp SEMI       &kp SQT
    &td_caps  &kp Z       &kp X       &kp C      &kp V      &kp B    &kp N    &mt RGUI M &mt RALT COMMA  &mt RCTRL DOT &mt RSHFT FSLH &kp RCTRL
                                              &mo 1 &kp SPACE &tog 1 &kp RET &mo 1
                         >;
