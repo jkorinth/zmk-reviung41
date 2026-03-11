@@ -44,10 +44,4 @@
     chosen {
         zmk,underglow = &led_strip;
     };
-
-    rgb_underglow_mask {
-	compatible = "zmk,zmk-rgb-underglow-mask-leds";
-	// mask everything but the central top-side LED
-	led_mask = <0 1 2 3 4 5 6 7 8 9>;
-    };
 };
