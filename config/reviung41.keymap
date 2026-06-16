@@ -156,11 +156,6 @@
             bindings = <&kp BSPC>;
         };
 
-        combo_tab {
-            key-positions = <14 13>;
-            bindings = <&kp TAB>;
-        };
-
         combo_sqt {
             key-positions = <21 22>;
             bindings = <&kp SQT>;
@@ -198,12 +193,6 @@
 
         // mouse mode
 
-        combo_mouse_mode {
-            require-prior-idle-ms = <500>;
-            key-positions = <38>;
-            bindings = <&to 2>;
-        };
-
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <14 15 16>;
@@ -231,7 +220,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "TD_FLAYER";
         #binding-cells = <0>;
-        bindings = <&mo 1>, <&tog 3>;
+        bindings = <&mo 1>, <&sl 2>;
     };
 
     behaviors {
@@ -248,10 +237,10 @@
             //                                 | MO(1) | SPC | TOG(2) | RET | MO(1) |
 
             bindings = <
-&none  &mt N1 Q  &mt N2 W  &mt N3 E  &mt N4 R   &mt N5 T          &mt N6 Y  &mt N7 U  &mt N8 I    &mt N9 O  &mt N0 P  &none
-&none  &kp A     &kp S     &kp D     &kp F      &kp G             &kp H     &kp J     &kp K       &kp L     &kp SEMI  &none
-&none  &td_caps  &kp X     &kp C     &kp V      &kp B             &kp N     &kp M     &kp COMMA   &kp DOT   &kp FSLH  &none
-                           &mo 1     &kp SPACE            &tog 1            &kp RET   &td_flayer
+&none  &mt N1 Q  &mt N2 W  &mt N3 E  &mt N4 R   &mt N5 T           &mt N6 Y  &mt N7 U  &mt N8 I    &mt N9 O  &mt N0 P  &none
+&none  &kp A     &kp S     &kp D     &kp F      &kp G              &kp H     &kp J     &kp K       &kp L     &kp SEMI  &none
+&none  &td_caps  &kp X     &kp C     &kp V      &kp B              &kp N     &kp M     &kp COMMA   &kp DOT   &kp FSLH  &none
+                           &mo 1     &kp SPACE            &kp TAB            &kp RET   &td_flayer
             >;
         };
 
@@ -275,7 +264,7 @@
 &trans  &mt F11 F1  &mt F12 F2  &kp F3  &kp F4  &kp F5          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
 &trans  &trans      &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans   &trans
 &trans  &trans      &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans   &trans
-                                &trans  &tog 3          &trans          &tog 2  &trans
+                                &none   &trans          &trans          &trans  &trans
             >;
         };
 
